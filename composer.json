@@ -1,0 +1,54 @@
+{
+    "name": "subratadutta/my-package",
+    "description": "Test",
+    "keywords": [
+        "subratadutta",
+        "my-package"
+    ],
+    "homepage": "https://github.com/subratadutta/my-package",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Subrata Dutta",
+            "email": "subratadutta777@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Subratadutta\\MyPackage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Subratadutta\\MyPackage\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Subratadutta\\MyPackage\\MyPackageServiceProvider"
+            ],
+            "aliases": {
+                "MyPackage": "Subratadutta\\MyPackage\\MyPackageFacade"
+            }
+        }
+    }
+}
